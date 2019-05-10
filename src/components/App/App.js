@@ -15,12 +15,18 @@ class App extends Component {
   getGalleryList() {
     Axios.get('/gallery')
       .then((response) => {
-        console.log(response);
         this.setState({
           galleryList: response.data,
         })
       })
   } // end getGalleryList
+
+  updateLikes = (eventObject) => {
+    Axios.put('/gallery/like/' + eventObject.target.dataset.id)
+      .then((response) => {
+        this.getGalleryList();
+      })
+  }
 
   //use run server on 1.node
   render() {
@@ -31,7 +37,7 @@ class App extends Component {
         </header>
         <br />
         <p>Gallery goes here</p>
-        <GalleryList galleryList={this.state.galleryList} />
+        <GalleryList galleryList={this.state.galleryList} updateLikes={this.updateLikes} />
       </div>
     );
   }
