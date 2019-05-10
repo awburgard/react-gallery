@@ -19,7 +19,7 @@ class GalleryItem extends Component {
                 <br />
                 Likes: {this.props.individualData.likes}
                 <br />
-                <button data-id={this.props.individualData.id} onClick={this.props.updateLikes}>Love it!</button>
+                <button className="btn btn-primary"data-id={this.props.individualData.id} onClick={this.props.updateLikes}>Love it!</button>
             </div>
         )
     }

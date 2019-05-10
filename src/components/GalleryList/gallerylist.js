@@ -6,11 +6,11 @@ class GalleryList extends Component {
     render() {
         const htmlList = this.props.galleryList.map((indvItem, i) => {
             return (
-                <GalleryItem individualData={indvItem} i={i} key={i} updateLikes={this.props.updateLikes} />
+                <div className="col-md-3"><GalleryItem individualData={indvItem} i={i} key={i} updateLikes={this.props.updateLikes} /></div>
             )
         })
         return (
-            <div>
+            <div className="row">
                 {htmlList}
             </div>
         )
