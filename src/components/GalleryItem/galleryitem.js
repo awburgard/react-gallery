@@ -13,7 +13,13 @@ class GalleryItem extends Component {
     render() {
         return (
             <div className={this.state.reveal} key={this.props.i}>
-                <img src={this.props.individualData.path} alt={this.props.individualData.description} data-id={this.props.i} onClick={this.revealDescription} />
+                <img
+                className="rounded-circle"
+                src={this.props.individualData.path}
+                alt={this.props.individualData.description}
+                data-id={this.props.i}
+                onClick={this.revealDescription}
+                />
                 <br />
                 <div className="description">{this.props.individualData.description}</div>
                 <br />

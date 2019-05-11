@@ -6,7 +6,8 @@ class GalleryList extends Component {
     render() {
         const htmlList = this.props.galleryList.map((indvItem, i) => {
             return (
-                <div className="col-md-3"><GalleryItem individualData={indvItem} i={i} key={i} updateLikes={this.props.updateLikes} /></div>
+                <div className="col-md-3">
+                <GalleryItem individualData={indvItem} i={i} key={i} updateLikes={this.props.updateLikes} /></div>
             )
         })
         return (
