@@ -27,11 +27,5 @@
 }
 
 img {
-  margin: 25px;
-  height:100px;
-  width: 100px;
-}
-
-p {
-  margin: 25px;
+  width: 100%;
 }

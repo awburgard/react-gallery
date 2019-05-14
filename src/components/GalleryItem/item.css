@@ -1,7 +1,10 @@
-.revealDescription .description{
-    display: block;
+.card{
+    height: 100%;
+    margin: 25px;
 }
 
-.description{
-    display: none;
+.card-img-top{
+    overflow: hidden;
+    position: relative;
+    height: 220px
 }
